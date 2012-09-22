@@ -1,0 +1,14 @@
+@startuml lifecycle.png
+
+skinparam monochrome true
+
+[*] --> Uninitialized 
+Uninitialized --> Initialized: Initializing
+Initialized --> Started: Starting
+Started --> Stopped: Stopping
+Stopped --> Started: Restarting
+Stopped --> Closed: Closing
+Closed --> [*]
+
+@enduml
+

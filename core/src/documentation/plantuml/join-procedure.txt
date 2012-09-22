@@ -1,0 +1,10 @@
+@startuml join-procedure.png
+
+skinparam monochrome true
+
+(*) --> Startup
+if "advertisers defined" then
+    -left->[true] "Advertise"
+endif
+
+@enduml

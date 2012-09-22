@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.squaledb.core</groupId>
+  <artifactId>parent</artifactId>
+
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>org.squaledb</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.1-SNAPSHOT</version>
+  </parent>
+
+  <modules>
+    <module>kernel</module>
+    <module>management</module>
+    <module>cli</module>
+  </modules>
+
+  <name>Core</name>
+
+  <build>
+    <plugins>
+        <plugin>
+                <!-- Graphviz must be installed. -->
+                <groupId>com.github.jeluard</groupId>
+                <artifactId>maven-plantuml-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>generate-plantuml</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceFiles>
+                                <directory>${basedir}</directory>
+                                <includes>                            
+                                    <include>src/documentation/plantuml/*.txt</include>
+                                </includes>
+                            </sourceFiles>
+                            <outputDirectory>${basedir}/target/images</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--plugin>
+                <groupId>org.jboss.maven.plugins</groupId>
+                <artifactId>maven-jdocbook-plugin</artifactId>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>generate-administrator-guide</id>
+                        <phase>package</phase>
+                        <goals>
+                          <goal>resources</goal>
+                          <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDocumentName>administrator-guide.xml</sourceDocumentName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-developer-guide</id>
+                        <phase>package</phase>
+                        <goals>
+                          <goal>resources</goal>
+                          <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDocumentName>developer-guide.xml</sourceDocumentName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-user-guide</id>
+                        <phase>package</phase>
+                        <goals>
+                          <goal>resources</goal>
+                          <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDocumentName>user-guide.xml</sourceDocumentName>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceDirectory>${basedir}/src/documentation/docbook</sourceDirectory>
+                    <masterTranslation>en-US</masterTranslation>
+                    <injections>
+                        <injection>
+                            <name>name</name>
+                            <value>${project.name}</value>
+                        </injection>
+                        <injection>
+                            <name>version</name>
+                            <value>${project.version}</value>
+                        </injection>
+                    </injections>
+                  <imageResource>
+                    <directory>${basedir}/target/</directory>
+                    <includes>
+                      <include>images/**/*</include>
+                    </includes>
+                  </imageResource>
+                    <formats>
+                        <format>
+                            <formatName>pdf</formatName>
+                        </format>
+                        <format>
+                            <formatName>html</formatName>
+                            <stylesheetResource>file:///${basedir}/src/documentation/docbook/xslt/xhtml.xsl</stylesheetResource>
+                        </format>
+                        <format>
+                            <formatName>html_single</formatName>
+                            <stylesheetResource>file:///${basedir}/src/documentation/docbook/xslt/xhtml.xsl</stylesheetResource>
+                        </format>
+                    </formats>
+                    <options>
+                        <xincludeSupported>true</xincludeSupported>
+                        <localeSeparator>-</localeSeparator>
+                        <useRelativeImageUris>true</useRelativeImageUris>
+                    </options>
+                </configuration>
+            </plugin-->
+        </plugins>
+    </build>
+
+</project>

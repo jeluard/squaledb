@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.docbook.org/xml/4.5/docbookx.dtd">
+<book lang="en" xmlns="http://docbook.org/ns/docbook"
+	            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd">
+
+  <bookinfo>
+    <title>&name; &version; User Guide</title>
+  </bookinfo>
+
+  <toc />
+
+  <xi:include href="chapters/preface.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
+
+</book>

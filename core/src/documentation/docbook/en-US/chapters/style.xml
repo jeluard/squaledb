@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.1//EN"
+ "http://www.docbook.org/xml/simple/1.1/sdocbook.dtd" [
+  <!ENTITY flo "&#x159;">
+  ]>
+<article id="index">
+  <articleinfo>
+    <title></title>
+    <abstract>
+      <para></para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title></title>
+    
+    <para>
+   Follows http://davetron5000.github.com/scala-style/index.html
+
+Imports order (should be lexicographically ordered):
+# SqualeDB (not qualified) as a block
+# Scala (FQN)
+# Java using first qualifier as a block discriminant (FQN)
+ie
+com.aa
+com.bb
+
+java.cc
+
+
+inline Function:
+# if several lines: 
+values.filter(value=>false)
+#if multiple lines: 
+values.filter { value =>
+  ...
+  ...
+}
+
+        
+    </para>
+
+    <para></para>
+  </section>
+
+
+</article>

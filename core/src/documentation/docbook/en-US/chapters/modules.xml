@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.1//EN"
+ "http://www.docbook.org/xml/simple/1.1/sdocbook.dtd" [
+  <!ENTITY flo "&#x159;">
+  ]>
+<article id="index">
+  <articleinfo>
+    <title>Modules</title>
+    <abstract>
+      <para></para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title></title>
+    
+    <para>
+    
+        Modules hierarchy follows package one.
+        Modules name follows abstract trait:
+        * plural for implem folders
+        * trait Discovery => module discoverers (name: Discovery implementations).
+        * CamelCase to dash-based. What about dash-based and package names?
+        * artifactId/groupId follows folders and module name
+        * source code package follows abstract trait
+        
+        A module has a usage level (Production, Dev)
+
+        Client can remotely download needed modules.
+    </para>
+
+    <para></para>
+  </section>
+
+
+</article>

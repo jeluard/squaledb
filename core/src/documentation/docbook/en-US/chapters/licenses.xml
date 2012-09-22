@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.1//EN"
+ "http://www.docbook.org/xml/simple/1.1/sdocbook.dtd" [
+  <!ENTITY flo "&#x159;">
+  ]>
+<article id="index">
+  <articleinfo>
+    <title></title>
+    <abstract>
+      <para></para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title></title>
+    
+    <para>
+   SqualeDB license is compatible (and can depend on library licensed) with:
+   * Apache 2
+   * BSD
+   * BSD 2 (aka New BSD) (http://www.opensource.org/licenses/bsd-license.php)
+   * MIT
+   * CDDL 1.0 (http://www.opensource.org/licenses/cddl1) 
+        
+    </para>
+
+    <para></para>
+  </section>
+
+
+</article>

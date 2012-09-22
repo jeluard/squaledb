@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD Simplified DocBook XML V1.1//EN"
+ "http://www.docbook.org/xml/simple/1.1/sdocbook.dtd" [
+  <!ENTITY flo "&#x159;">
+  ]>
+<article id="index">
+  <articleinfo>
+    <title>Upgrade (Dynamic Module)</title>
+    <abstract>
+      <para></para>
+    </abstract>
+  </articleinfo>
+
+  <section id="intro">
+    <title>Upgrade</title>
+    
+    <para>
+    
+        Patches (minor updates) have an attached severity level (manifest?).
+        Patches define minimum applicable level (ie needed current version to apply patch. Might involve several successiv patch if current is too old. Allow to drop support for older version.)
+        Version defines compatibility level. Semver plugin can be used to force compatibility verification.
+        An optional component monitors new updates (Maven repo? Abstracted repo (svn,..)? RSS, Aton feed?). 
+        Dependending on compatibility level and severity each node can self upgrade or not. (abstraction to take this decision: always/never, auth based, JMX, workflow based...)
+        All detected upgrade can be listed and applied manually.
+        
+        Default impl relies on OSGI and clouds extension.
+        
+        Upgrades history is available (can be modified). App lifecycle is persisted: actions, versions, ..
+        Allows to rollback and revert to previous states. Plugin repo must allow access to previous version (or provide in-memory storage for some time).
+        
+        Upgrade can be streamed from other nodes (if some node doesn't have access to repo).
+        
+        Entry points allow to perform action before upgrade (like update SQL table schemas?). Receive current version.
+        If this hook fails then upgrade fails. Upgrade status will then be FAILED (others are IN PROGRESS (with % for progression) and DONE) What if only fails in one node? (strategy: rollback all, continue...)
+        Downgrade hooks are also available to restore correct state (after downgrade?). Receives failed upgraded and target downgraded version.
+        
+        Cluster shouldn't be fully available if upgrade failed (and no succesfull downgrade is performed).
+        
+        What if downgrade fails?
+        
+        Upgrade procedure:
+        Only public module (ie which are not used purely locally) upgrades require cluster consensus.
+        
+        node used to perform upgrade will:
+        * select a subset of nodes
+        * remove them from cluster
+        * upgrade them
+        * reintegrate them into a new upgraded cluster
+        * repeat procedure for other subsets until whole cluster has been migrated
+        Non upgraded cluster can still answer request if needed.
+        Both cluster should be accessible and clearly distinguishable.
+        Client should be able to specify minimal version of module needed.
+        
+        Whole procedure must be scriptable and ends up in stable state (either upgraded or intact).
+    </para>
+
+    <para></para>
+  </section>
+
+
+</article>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<chapter id="index" xmlns="http://docbook.org/ns/docbook"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://docbook.org/ns/docbook http://www.docbook.org/xml/5.0/xsd/docbook.xsd">
+
+  <title>Preface</title>
+
+  <note>
+  This is a note.
+  </note>
+  
+  <section id="philosophy">
+    <title>Test <interfacename>test</interfacename></title>
+    <para>
+  
+    </para>
+  </section>
+
+  <section id="motivation">
+    <title>Motivation</title>
+    <figure>
+        <title>Test</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata fileref="images/lifecycle.png" scale="50" scalefit="1" align="center" />
+            </imageobject>
+            <textobject><phrase>Test phrase</phrase></textobject>
+        </mediaobject>
+    </figure>
+
+  </section>
+
+
+</chapter>

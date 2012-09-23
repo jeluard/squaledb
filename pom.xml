@@ -17,6 +17,12 @@
     Building blocks for scalable databases.
     </description>
 
+    <modules>
+        <module>core</module>
+        <module>modules</module>
+        <module>blueprints</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
